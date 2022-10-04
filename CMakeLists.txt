@@ -1,6 +1,11 @@
-cmake_minimum_required(VERSION 3.23)
-project(template)
+cmake_minimum_required(VERSION 3.0.0)
+project(tictactoe VERSION 0.1.0)
 
-set(CMAKE_CXX_STANDARD 20)
+include(CTest)
+enable_testing()
 
-add_executable(template main.cpp)
+add_executable(tictactoe main.cpp)
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)
